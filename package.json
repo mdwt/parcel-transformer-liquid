@@ -1,0 +1,52 @@
+{
+  "name": "parcel-transformer-liquid",
+  "version": "0.2.0",
+  "description": "Parcel v2 transformer plugin for Liquid",
+  "engines": {
+    "node": ">= 12.0.0",
+    "parcel": "^2.0.0-beta.1"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint ./lib",
+    "lint:fix": "eslint --fix ./lib"
+  },
+  "lint-staged": {
+    "lib/*.js": [
+      "eslint --fix ./lib",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarscode/parcel-transformer-liquid.git"
+  },
+  "keywords": [
+    "parcel",
+    "parcel-transformer",
+    "parcel-plugin",
+    "liquid"
+  ],
+  "author": "Meiring <meiringdewet1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdwt/parcel-transformer-liquid/issues"
+  },
+  "homepage": "https://github.com/mdwt/parcel-transformer-liquid#readme",
+  "dependencies": {
+    "@parcel/plugin": "^2.4.0",
+    "liquidjs": "^9.36.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.1"
+  }
+}
